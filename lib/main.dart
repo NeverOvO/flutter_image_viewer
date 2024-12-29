@@ -59,8 +59,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   List imageUrl = [
     "https://img1.baidu.com/it/u=3840271671,3142495343&fm=253&fmt=auto&app=120&f=JPEG?w=879&h=500",
-    // "https://img1.baidu.com/it/u=1444694499,1134247140&fm=253&fmt=auto&app=120&f=JPEG?w=837&h=500",
-    // "https://img2.baidu.com/it/u=3422678176,163511578&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=500",
+    "https://img1.baidu.com/it/u=1444694499,1134247140&fm=253&fmt=auto&app=120&f=JPEG?w=837&h=500",
+    "https://img2.baidu.com/it/u=3422678176,163511578&fm=253&fmt=auto&app=120&f=JPEG?w=800&h=500",
   ];
 
   @override
@@ -82,9 +82,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   return ImageViewer(imageList: imageUrl, initialPage: 0,);
                 },
               );
-              //使用Dio弹窗
+              //使用Get弹窗
               // Get.dialog(
-              //   ImageSwiper(imageList: imageUrl, initialPage: 0,),
+              //   ImageViewer(imageList: imageUrl, initialPage: 0,),
               //   useSafeArea: false,
               // );
             },
