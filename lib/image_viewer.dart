@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class ImageSwiper extends StatefulWidget {
+class ImageViewer extends StatefulWidget {
   final List imageList;
   final int initialPage;
 
   // 构造函数中提供默认值
-  const ImageSwiper({super.key, required this.imageList,this.initialPage = 0,});
+  const ImageViewer({super.key, required this.imageList,this.initialPage = 0,});
 
   @override
-  State<ImageSwiper> createState() => ImageSwiperState();
+  State<ImageViewer> createState() => ImageSwiperState();
 }
 
-class ImageSwiperState extends State<ImageSwiper> {
+class ImageSwiperState extends State<ImageViewer> {
   late PageController _pageController;
   bool _isParentScrollable = true;
   bool _singleImageMode = true;//单图模式判断避免非必要滑动
@@ -75,7 +75,7 @@ class ImageSwiperState extends State<ImageSwiper> {
               itemBuilder: (context, index) {
                 return Stack(
                   children: [
-                    ImageView(
+                    NeverImageView(
                       imageUrl:widget.imageList[index],
                       onBoundaryReached: (bool isAtBoundary) {
                         setState(() {
@@ -122,17 +122,17 @@ class ImageSwiperState extends State<ImageSwiper> {
   }
 }
 
-class ImageView extends StatefulWidget {
+class NeverImageView extends StatefulWidget {
   final String imageUrl;
   final ValueChanged<bool> onBoundaryReached;
 
-  const ImageView({super.key, required this.imageUrl, required this.onBoundaryReached});
+  const NeverImageView({super.key, required this.imageUrl, required this.onBoundaryReached});
 
   @override
-  ImageViewState createState() => ImageViewState();
+  NeverImageViewState createState() => NeverImageViewState();
 }
 
-class ImageViewState extends State<ImageView> with SingleTickerProviderStateMixin{
+class NeverImageViewState extends State<NeverImageView> with SingleTickerProviderStateMixin{
   double _scale = 1.0; // 当前缩放比例
   double _previousScale = 1.0; // 上一次缩放比例
   Offset _currentOffset = Offset.zero; // 当前拖动坐标

@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 context: context,
                 barrierDismissible: false, // 禁止点击外部关闭对话框
                 builder: (BuildContext context) {
-                  return ImageSwiper(imageList: imageUrl, initialPage: 0,);
+                  return ImageViewer(imageList: imageUrl, initialPage: 0,);
                 },
               );
               //使用Dio弹窗
