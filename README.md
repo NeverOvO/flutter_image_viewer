@@ -9,16 +9,41 @@ Flutter基础代码实现的仿手机QQ图片放大查看器组件
 - 多图片数组滑动翻页查看
 - 随意添加相关功能，例如下载图片、分享图片等
 
-## 主要代码
-
-
+## 使用方法
 
 ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
+showDialog(
+  context: context,
+  barrierDismissible: false,
+  builder: (BuildContext context) {
+    return ImageViewer(imageList: imageUrl, initialPage: 0,);
+  },
+);
+```
+使用Get弹窗
+```
+Get.dialog(
+  ImageViewer(imageList: imageUrl, initialPage: 0,),
+  useSafeArea: false,
+);
 ```
 
+## 视频演示
+
+单图查看演示
+
+https://github.com/user-attachments/assets/f459fb4a-cd8c-4d33-81d4-c892137b0b87
+
+多图查看演示
+
+https://github.com/user-attachments/assets/c8b935aa-b090-4454-973a-75eca907e983
+
+## 功能提醒
+
+- 在放大倍数为1时，才可以进行随意拖动关闭，滑动到下一个图片查看
+- 放大后只能左右滑动查看图片，且无法切换到下一个图片
+- 双击图片可以进行放大或者还原图片倍数
+- 单击可以关闭图片
 
 ## Getting Started
 
