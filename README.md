@@ -46,6 +46,7 @@ https://github.com/user-attachments/assets/c8b935aa-b090-4454-973a-75eca907e983
 - 放大后只能滑动查看图片，且无法切换到下一个图片
 - 双击图片可以进行放大或者还原图片倍数
 - 单击可以关闭图片
+- 九宫格场景可以设置initialPage参数，默认从第几张打开，如果大于图片数量，会默认到最后一页
 
 ## Getting Started
 
